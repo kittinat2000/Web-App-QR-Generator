@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 2rem;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  #container {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .url-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .url-group input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content:center;
+    margin-bottom: 10px;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .circle-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .circle-button:active {
+    transform: scale(0.9); /* ยุบเล็กน้อยเมื่อกด */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  
+  .circle-button.add {
+    background: #4caf50;
+    color: white;
+  }
+  
+  .circle-button.remove {
+    background: #f44336;
+    color: white;
+  }
+  
+
+  .generate {
+    display: block;               /* ทำให้ปุ่มเป็น block element */
+    margin: 1rem auto 0 auto;     /* จัดให้อยู่ตรงกลางแนวนอน */
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;           /* มุมมนเล็กน้อย */
+    background: #333333;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;           /* สำหรับ pseudo-element */
+    overflow: hidden;             /* ป้องกัน bar เกินขอบ */
+    transition: background 0.3s ease, transform 0.1s ease;
+  }
+  
+  .generate::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.4s ease;
+  }
+  
+  .generate:hover::before {
+    left: 0;
+  }
+  
+  .generate:active {
+    transform: scale(0.95);       /* ย่อเล็กน้อยเมื่อกด */
+  }
+  
+  
